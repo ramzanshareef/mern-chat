@@ -4,7 +4,7 @@ const { dbURL } = require("../config/configs");
 const connectDB = async (req, res) => {
     try {
         console.log("DBURL = ", dbURL)
-        await mongoose.connect(dbURL)
+        await mongoose.connect(dbURL + "/chatAppDB")
             .then(() => {
                 console.log("Connected to MongoDB");
             })
