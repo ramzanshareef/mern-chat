@@ -1,7 +1,7 @@
 import { createContext, useContext, useState } from "react";
 
 const userContext = createContext();
-const backendUrl = "http://localhost:5000";
+const backendUrl = process.env.REACT_APP_API_ENDPOINT;
 
 const UserProvider = (props) => {
     const isAuth = document.cookie.includes("isAuthenticated=true")?true:false;

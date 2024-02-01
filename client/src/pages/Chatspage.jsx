@@ -4,7 +4,7 @@ import Sidebar from "../components/chat/Sidebar";
 import Chat from "../components/chat/Chat";
 import Right from "../components/chat/Right";
 import { UserState } from "../context/user";
-const socket = io("http://localhost:5000");
+const socket = io(process.env.REACT_APP_API_ENDPOINT);
 
 const Chatspage = () => {
     const { isAuth } = UserState();

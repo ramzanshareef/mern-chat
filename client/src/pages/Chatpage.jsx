@@ -1,7 +1,7 @@
 import io from "socket.io-client";
 import { useEffect, useRef, useState } from "react";
 import { UserState } from "../context/user";
-const socket = io("http://localhost:5000");
+const socket = io(process.env.REACT_APP_API_ENDPOINT);
 
 const Chatpage = () => {
     const effectRan = useRef(false);

@@ -3,7 +3,7 @@ import { MessageState } from "../../context/message";
 import { ChatState } from "../../context/chat";
 import io from "socket.io-client";
 import { UserState } from "../../context/user";
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
 var socket;
 
 const Chat = () => {

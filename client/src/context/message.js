@@ -1,7 +1,7 @@
 import { createContext, useContext } from "react";
 
 const messageContext = createContext();
-const backendUrl = "http://localhost:5000";
+const backendUrl = process.env.REACT_APP_API_ENDPOINT;
 
 const MessageProvider = (props) => {
 

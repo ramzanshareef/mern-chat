@@ -1,7 +1,7 @@
 import { createContext, useContext, useState } from "react";
 
 const chatContext = createContext();
-const backendUrl = "http://localhost:5000";
+const backendUrl = process.env.REACT_APP_API_ENDPOINT;
 
 const ChatProvider = (props) => {
     const [recieverID, setRecieverID] = useState("");

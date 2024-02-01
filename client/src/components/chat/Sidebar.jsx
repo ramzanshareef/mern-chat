@@ -2,7 +2,7 @@ import io from "socket.io-client";
 import React, { useRef, useState, useEffect } from 'react';
 import { UserState } from '../../context/user';
 import { ChatState } from '../../context/chat';
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
 var socket;
 
 const Sidebar = () => {
